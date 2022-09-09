@@ -153,7 +153,7 @@ font-size: 18px;
     display: grid;
     grid-template-columns: 275px 300px;
     /* grid-template-rows:100px 100px 100px 100px; */
-    grid-template-rows:80px 80px 80px 80px;
+    grid-template-rows:75px 75px 75px 75px;
     width: 625px;
   }
 
@@ -164,6 +164,7 @@ font-size: 18px;
     font-size: 24px;
     grid-column-start: 2;
     text-align: left;
+    padding: 20px;
   }
 
 
@@ -195,8 +196,11 @@ font-size: 18px;
     display: grid;
     display: block;
     font-size: 16px;
-    padding-left: 8px;
+    padding-left: 15px;
     border-left: 2px solid green;
+    grid-row-start: 3;
+    grid-row-end: 5;
+    margin: 20px
   }
   
 
@@ -204,12 +208,17 @@ font-size: 18px;
     display: grid;
     grid-column-start: 2;
     text-align: left;
+    grid-row-start: 5;
+    grid-row-end: 6;
+    padding: 20px;
   }
 
   #occupation {
     display: grid;
     grid-column-start: 2;
     text-align: left;
+    background-color: white;
+    padding: 20px;
   }
 
   #free {
@@ -240,7 +249,7 @@ font-size: 18px;
     /* grid-column-start: ; */
     grid-column-start: 1;
     grid-row-start: 5;
-    /* align-items: inline; */
+    align-items: flex-end
   }
 
   
