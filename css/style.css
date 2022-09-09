@@ -23,71 +23,99 @@ body {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
     Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
   margin: 0;
+  min-height: 100vh;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center; 
- 
-}
+  justify-content: center;
 
-
-main {
-  width: 350px;
-  background-color: white;
+  flex-direction: column;
+  background-color: rgb(47, 45, 45);
   text-align: center;
-
-} 
-
-img {
-  border-radius: 50%;
-  border: solid green 2px;
 }
-
 
 #status {
   display: flex;
-  align-items: flex-end;
   justify-content: flex-end;
+  align-content: 5px;
   padding: 5px 5px;
-  color: gray;
+  color: grey;
 }
 
-#brand > p {
+main {
+  width: 300px;
+  background-color: white;
+  text-align: center
+}
+
+#img-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 125px;
+}
+
+img {
+  border-radius: 50%;
+  border: 5px solid rgb(14, 185, 65);
+}
+
+h1  {
+  text-align: center;
+  font-size: 24px;
+}
+
+#occupation {
+  background-color: rgb(236, 240, 241);
+  height: 60px;
+}
+
+#brand {
   display: none;
 }
 
-#stars {
-  font-size: 16px;
+
+p {
+  margin: 4px 0;
+}
+
+#free {
+font-size: 15px;
+}
+
+#cost {
+font-size: 18px;
+color: gray;
 }
 
 #psychic {
-  font-size: 14px;
+font-size: 14px;
+color: gray;
 }
 
-#big-font {
-  font-size: 16px;
+#stars {
+font-size: 18px;
 }
 
-#price {
-  font-size: 14px;
+#contact > p {
+  margin: 0;
 }
 
-#light-green {
-  background-color: lightgreen;
-  width: 175px;
+#lightgreen {
+  background-color: limegreen;
+  width: 120px;
   height: 60px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-#dark-green {
-  background-color: rgb(96, 143, 96);
-  width: 175px;
-  height: 60px;
+#darkgreen {
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: green;
+  width: 120x;
+  height: 60px;
 }
 
 #contact {
@@ -95,9 +123,6 @@ img {
   margin: 0px;
 }
 
-#contact > p {
-  margin: 0;
-}
 
 
 
@@ -105,98 +130,150 @@ img {
 
 
 
-/* mediaquery 1024px is a common "breakpoint" width for tablets */
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 768px) {
   body {
-    background-color: gray;
-    /* Use a system font, if none are available use an available sans-sarif   font */
+    /* background-color: gray;
+    Use a system font, if none are available use an available sans-sarif   font
       font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
         Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
       margin: 0;
-      /* display: flex;
+      display: grid;
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      background-color: rgb(47, 45, 45);
       text-align: center; */
-      /* grid-template-columns: 1fr 2fr; */ 
-      display: grid; 
-      grid-template-columns: 0.7fr 1.3fr; 
-      grid-template-rows: 1.4fr 0.6fr; 
-      gap: 0px 0px; 
-      color: red; 
-      
+      /* color: red; */
+  }
+  
+
+  
+  main {
+    background-color: white;
+    display: grid;
+    grid-template-columns: 275px 300px;
+    /* grid-template-rows:100px 100px 100px 100px; */
+    grid-template-rows:80px 80px 80px 80px;
+    width: 625px;
   }
 
-  main {
-    width: 600px;
-    background-color: white;
-  }
   
-  img {
-    border-radius: 50%;
-    border: solid green 2px;
+  h1  {
     display: grid;
+    text-align: center;
+    font-size: 24px;
+    grid-column-start: 2;
+    text-align: left;
   }
-  
-  
+
+
+  img {
+    justify-self: center;
+    display: grid;
+    justify-content: center;
+    border-radius: 50%;
+    border: 5px solid rgb(14, 185, 65);
+    /* grid-column-start: 2;
+    grid-column-end: 3; */
+    grid-row-start: 2;
+    height: 155px;
+  }
+
   #status {
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-    padding: 5px 5px;
-    color: gray;
+    display: grid;
+    text-align: left;
+    padding: 10px;
+    color: grey;
+    grid-column-start: 1;
+    justify-self: start;
   }
-  
-  #brand > p {
-    display: flex;
-  }
-  
-  
-  #stars {
+
+
+  #brand {
+    grid-column-start: 2;
+    text-align: left;
+    display: grid;
+    display: block;
     font-size: 16px;
-    
+    padding-left: 8px;
+    border-left: 2px solid green;
   }
+  
+
+  #offer {
+    display: grid;
+    grid-column-start: 2;
+    text-align: left;
+  }
+
+  #occupation {
+    display: grid;
+    grid-column-start: 2;
+    text-align: left;
+  }
+
+  #free {
+    font-size: 15px;
+    padding-left: 4px;
+  }
+  
+  #cost {
+    font-size: 18px;
+    color: gray;
+    padding-left: 4px;
+  }
+  
   
   #psychic {
     font-size: 14px;
-    text-align: right;
+    color: gray;
   }
   
-  #big-font {
-    font-size: 16px;
-    text-align: right;
+  #stars {
+    font-size: 18px;
   }
   
-  #price {
-    font-size: 14px;
-    text-align: right;
-  }
-  
-  #light-green {
-    background-color: lightgreen;
-    width: 300px;
-    height: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  #dark-green {
-    background-color: rgb(96, 143, 96);
-    width: 300px;
-    height: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
+
   #contact {
-    display: inline-flex;
+    display: flex;
     margin: 0px;
+    /* grid-column-start: ; */
+    grid-column-start: 1;
+    grid-row-start: 5;
+    /* align-items: inline; */
   }
+
   
   #contact > p {
     margin: 0;
   }
-}
+} 
 
+  #darkgreen {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    background-color: #248235;
+    width:150px;
+    height: 60px;
+  }
+
+  
+  #lightgreen {
+    background-color: lightgreen;
+    width: 150px;
+    height: 60px;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  
+
+
+
+
+
+
+
+  
